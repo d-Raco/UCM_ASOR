@@ -10,10 +10,7 @@ int main() {
 	uid_t id;
   struct passwd *user;
 
-  if((id = getuid()) < 0){
-   perror("Error in getuid");
-   return -1;
-  }
+  id = getuid();
 
   if((user = getpwuid(id)) < 0){
    perror("Error in getpwuid");

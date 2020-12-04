@@ -8,16 +8,9 @@
 int main() {
 	uid_t id;
 
-   if((id = getuid()) < 0){
-	   perror("Error in getuid");
-	   return -1;
-   }
+   id = getuid();
    printf("Real user id: %d\n", id);
-
-    if((id = geteuid()) < 0){
-	   perror("Error in geteuid");
-	   return -1;
-   }
+   id = geteuid();
    printf("Effective user id: %d\n", id);
 
    return 0;
