@@ -42,7 +42,7 @@ int main(int argc, char **argv) {
 		comm[1] = strtok(NULL, " ");
 		comm[2] = NULL;
 
-		if ((fd0 = open("/tmp/daemon.out", O_CREAT | O_TRUNC | O_RDWR, 0777)) < 0) {
+		if ((fd0 = open("/dev/null", O_CREAT | O_TRUNC | O_RDWR, 0777)) < 0) {
 		    perror("open");
 		    return -1;
 		}

@@ -5,7 +5,8 @@
 /* gcc -Wall -g execvp_execution.c -o execvp_execution */
 
 int main(int argc, char **argv) {
-	char *comm[3];
+	int i = 1;
+	char *comm[10];
 	
 	if (argc != 2) {
 		printf("Invalid number of arguments.\nUsage: ./execvp_execution \"<programm>\"\n");
@@ -13,8 +14,8 @@ int main(int argc, char **argv) {
 	}
 
 	comm[0] = strtok(argv[1], " ");
-	comm[1] = strtok(NULL, " ");
-	comm[2] = NULL;
+	while(comm[i] != NULL)
+		comm[i++] = strtok(NULL, " ");
 
 	execvp(comm[0], comm);
 
