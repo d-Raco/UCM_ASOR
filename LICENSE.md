@@ -1,4 +1,4 @@
-Copyright 2020 Ramón Costales
+Copyright 2020 Rymond3
 
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
 
